@@ -4,9 +4,6 @@
 
 ---
 
-## Video Walkthrough
-
-**[▶ Watch the 3 to 7 minute walkthrough](ADD_YOUR_VIDEO_LINK_HERE)**
 
 ---
 

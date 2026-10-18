@@ -1,0 +1,44 @@
+"Ticket","Title","Type","Status","Timestamp","Entry"
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:41:10 PM","Status changed: New to Resolved"
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:41:17 PM","Status changed: Resolved to In Progress"
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:43:17 PM","Denise has been successfully disabled from Active Directory"
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:45:34 PM","Removed from group policies (loan processor) and moved to disable users."
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:46:58 PM","Please see files attached for this user."
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","10/17/2026, 3:47:13 PM","Status changed: In Progress to Resolved"
+"JML-1001","Examiner finding: terminated employee still enabled","Leaver (Remediation)","Resolved","RESOLUTION","Please see files attached for this user."
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","10/17/2026, 5:02:52 PM","Status changed: New to In Progress"
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","10/17/2026, 5:04:17 PM","Ran a WhatIf script to ensure account would be deleted and logs created."
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","10/17/2026, 5:05:16 PM","Then did a live script run and successfully offboarded account!"
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","10/17/2026, 5:06:51 PM","See the attached file of accounts before & after state."
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","10/17/2026, 5:07:12 PM","Status changed: In Progress to Resolved"
+"JML-1002","Unowned privileged account: mreynolds","Leaver (Orphan)","Resolved","RESOLUTION","See the attached file of accounts before & after state."
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:08:13 PM","Status changed: New to In Progress"
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:09:04 PM","The are 15 accounts that says still works here on HR file."
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:09:40 PM","26 accounts have password that never expires."
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:17:22 PM","the following accounts have domain admin, 1 is a service account the other is the DC admin.
+
+Administrator   Administrator 
+Marcus Reynolds mreynolds     
+scanner         scanner       
+
+
+Not sure why he has domain admin, he has no HR record!"
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:17:51 PM","Status changed: In Progress to Resolved"
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","10/17/2026, 5:20:23 PM","Successfully offboarded! Moved to disabled users' folder."
+"JML-1003","Directory cleanup and the Domain Admin question","Remediation","Resolved","RESOLUTION","Successfully offboarded! Moved to disabled users' folder."
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:20:46 PM","Status changed: New to In Progress"
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:32:28 PM","User account has been successfully created. Added to ROLE-Teller group policy on her account."
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:32:56 PM","Password added must be change upon next logon."
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:34:33 PM","added manager Charlene"
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:36:01 PM","Onboarding completed!"
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","10/17/2026, 5:36:18 PM","Status changed: In Progress to Resolved"
+"JML-1004","New hire: Nadia Brooks, Teller, Elm Street","Joiner","Resolved","RESOLUTION","Onboarding completed!"
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:40:21 PM","I added Janet to the correct teller group."
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:40:25 PM","Status changed: New to In Progress"
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:44:51 PM","I tested her current access and saw that she still remained in the previous group.
+
+This is how privileged creep happens, so I removed her from the previous group."
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:46:28 PM","I confirmed her access from checking the ADUC GUI!"
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:46:50 PM","Mover completed!"
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","10/17/2026, 5:47:43 PM","Status changed: In Progress to Resolved"
+"JML-1005","Role change: Janet Ruiz, Teller to Loan Processor","Mover","Resolved","RESOLUTION","Mover completed!"

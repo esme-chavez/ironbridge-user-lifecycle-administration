@@ -18,10 +18,7 @@ What I inherited: every account in one flat container with no organizational uni
 
 The bank could not answer the examiners' question: who has access, and why.
 
-The first thing I noticed when I opened the directory was
-<!-- FILL IN: finish the sentence. What actually stood out, and what did it tell you about how the place had been run? -->
-
----
+When I first opened the directory, every account was piled into one container, making it impossible to tell which accounts were active, disabled, or server objects.
 
 ## Solution Overview
 
@@ -45,14 +42,13 @@ I migrated every surviving account with PowerShell, populating required attribut
 
 **Caught privilege creep in progress.** Processed a role change by adding the new role exactly as requested. The old role was still attached, so I removed it. Requests tell you what to add and never what to remove.
 
-The step I would do differently next time is
-<!-- FILL IN: finish it. What would you change about your order of work, or what took longer than it should have? -->
+The step I would do differently next time is carefully run scripts on my PowerShell and make sure that changes were being made. It caused delays when trying to complete this project.
 
 ---
 
 ## Tools Used
 
-Windows Server, Active Directory Domain Services, PowerShell, Group Policy Management, VirtualBox or UTM.
+Windows Server, Active Directory Domain Services, PowerShell, Group Policy Management, and VirtualBox.
 
 ---
 
@@ -70,17 +66,19 @@ Windows Server, Active Directory Domain Services, PowerShell, Group Policy Manag
 ## What I Learned
 
 **Disable, never delete.**
-Every account has a hidden identifier called a SID (Security Identifier), and file permissions, mailbox rights and audit log entries all point at that SID rather than at the name. Delete the account and
+Every account has a hidden identifier called a SID (Security Identifier), and file permissions, mailbox rights and audit log entries all point at that SID rather than at the name. Delete the account and you will lose all evidence of user's previous key access and their job role with the company. 
 <!-- FILL IN: finish the thought. What breaks? What happens if you recreate an account with the same name? -->
 
 **Access belongs on groups, not people.**
-A permission granted directly to a user works, but it never shows up in a group membership report, which means
-<!-- FILL IN: finish it. What can the bank no longer answer? Tie it back to the examiners' question. -->
+A permission granted directly to a user works, but it never shows up in a group membership report, which means only that user has access to 
+
 
 **A mover is two operations.**
-The request asked me to give her loan processing access. It never mentioned removing her teller access, and
+The request asked me to give her loan processing access. It never mentioned removing her teller access, and I made sure to remove her teller access because that would cause a privileged creep and she would have more access to a group, she is no longer with. 
 <!-- FILL IN: finish it. What happens if you only do the half you were asked for? What is that called? -->
 
+**PowerShell script run**
+When running a script on PowerShell always double check that changes are being made in Active Directory. I encounter one user not being disabled and one role was missing from AD groups. 
 <!-- FILL IN: Add one of your own in the same shape, a bolded line and two or three sentences.
      Pick whatever genuinely got you: the thing that took longest, the mistake you made, or the moment something clicked. -->
 

@@ -1,0 +1,11 @@
+﻿Role,Titles,Description
+ROLE-Executive,Chief Operating Officer,Executive leadership: management reporting and executive shared drive
+ROLE-BranchManager,Branch Manager,Branch operations: teller overrides and branch reporting. No wire system access
+ROLE-Teller,Teller;Head Teller,Teller platform and core banking (teller functions). No wire system access
+ROLE-LoanProcessor,Loan Processor,Loan origination system (processing) and the loan file share
+ROLE-LoanOfficer,Mortgage Officer,Loan origination system (origination) and credit reports
+ROLE-LendingManager,Loan Administration Manager,Loan approvals and lending reports
+ROLE-WireOperations,Wire Operations Specialist,Wire operations desk tools. Wire system rights are governed separately (SOP 7.4)
+ROLE-Operations,Branch Operations Specialist;Back Office Specialist;Operations Manager,Back office and branch operations systems
+ROLE-Facilities,Facilities Coordinator,Facilities and building systems only
+ROLE-WealthAdvisor,Wealth Advisor,Wealth management platform and client files

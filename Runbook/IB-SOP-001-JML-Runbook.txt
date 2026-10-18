@@ -1,0 +1,127 @@
+﻿IB-SOP-001 | USER ACCESS LIFECYCLE RUNBOOK (JOINER / MOVER / LEAVER)
+Ironbridge Bank & Trust | Information Technology
+Version 1.0 | Owner: IT Systems & Identity | Approved by: Ray Whitfield, COO
+Remediates: Report of Examination IT-2025-0417, MRA #1
+==========================================================================
+
+1. PURPOSE
+1.1 This runbook defines how every user account at Ironbridge is created, changed, and removed.
+1.2 The goal: the bank can answer, at any moment, who has access, to what, and why.
+1.3 No step is optional. If a step cannot be completed, stop and record why in the ticket.
+
+2. AUTHORITY AND SOURCES OF TRUTH
+2.1 HR is the authoritative source for employees. File: C:\Ironbridge\HR\hr-roster.csv
+2.2 Service accounts require a named owner and a documented purpose.
+2.3 No ticket, no change. Every account action is performed against a ServiceDesk ticket.
+2.4 Required approvals:
+    Joiner ..... HR record plus hiring manager
+    Mover ...... receiving manager plus releasing manager or HR
+    Leaver ..... HR termination record or COO authorization
+    Privileged . COO
+2.5 Urgency is not approval.
+
+3. DIRECTORY BASELINE
+3.1 Required OU structure:
+    Ironbridge
+      Users
+        Executive | Lending | Wire Operations | Wealth Management | Operations | Compliance | IT
+        Retail Banking
+          Main Office | Elm Street | Maple Avenue | Riverside | Oak Hill
+      Groups
+      Computers
+      Service Accounts
+      Disabled Users
+    Retail Banking staff are placed by branch. All other staff are placed by department.
+    Every OU is protected from accidental deletion.
+3.2 Naming:
+    Users ............ first initial + last name, lowercase (Denise Kowalczyk = dkowalczyk)
+    Collision ........ first two letters of first name + last name. Record it in the ticket.
+    UPN .............. username@ironbridge.local
+    Service accounts . svc- prefix. Never a human sounding name.
+    Groups ........... ROLE- prefix. Role names come from the role catalog only.
+    Computers ........ WKS-<SITE>-<NNN> (WKS-ELM-014)
+3.3 Required attributes on every employee account:
+    First name, Last name, Display name, Username, UPN, Employee ID, Title, Department,
+    Office (branch or HQ), Company, Manager (all except Executive).
+    Employee passwords must expire. "Password never expires" is for documented service accounts only.
+3.4 Access model:
+    Access is granted through ROLE- groups only. Never directly to a user.
+    Every account holds exactly ONE role group. The only other groups permitted are the
+    funds-transfer groups governed under Section 7.4.
+    Roles are defined in C:\Ironbridge\Runbook\role-catalog.csv and mapped from job title.
+    "Give them the same access as <coworker>" is never a valid request.
+3.5 IT must author and maintain the Directory Standard, IB-STD-001 (Appendix A).
+3.6 Legacy account disposition codes:
+    KEEP ...... belongs to an active employee in HR. Migrate to standard.
+    DISABLE ... matches no one, OR is a shared account. One identity, one account.
+                Disable, stamp description, move to Disabled Users.
+    LEAVER .... belongs to a terminated person or an orphan. Process under Section 6.
+    SERVICE ... used by a device or application. Rename svc-, document owner, move to Service Accounts.
+
+4. JOINER
+4.1 Confirm the ticket and the approval.
+4.2 Confirm the HR record: Employee ID, title, branch or department, manager.
+4.3 Determine the role from the role catalog using the job title.
+4.4 Generate the username (3.2). Check for a collision BEFORE creating anything.
+4.5 Create the account directly in the correct OU (3.1). Populate every attribute in 3.3.
+4.6 Temporary password, change required at next logon. Never send a password by email or chat.
+4.7 Add the account to its ONE role group.
+4.8 Verify attributes, OU, and group membership.
+4.9 Record in the ticket: username, role, access granted, approver, date.
+
+5. MOVER
+5.1 Confirm approvals from the receiving manager and the releasing manager or HR.
+5.2 Capture the BEFORE access to C:\Ironbridge\Evidence.
+5.3 Add the new role group.
+5.4 REMOVE the old role group. Mandatory. This is the most commonly missed step in access
+    management, and it is exactly how privilege creep begins.
+5.5 Update title, department, office, and manager.
+5.6 Move the account to the OU for the new role.
+5.7 Verify exactly one role group. Capture the AFTER state. Record both in the ticket.
+
+6. LEAVER
+6.1 Confirm the termination (HR) or the COO authorization.
+6.2 Capture the BEFORE state to C:\Ironbridge\Evidence. Evidence first, always.
+6.3 Disable the account.
+6.4 Reset the password to a long random value. Clear "Password never expires".
+6.5 Record, then remove, every group membership.
+6.6 Stamp the description: LEAVER | <ticket> | Disabled <date> | Do not delete before retention review
+6.7 Move the account to Disabled Users.
+6.8 DO NOT DELETE. Deleting destroys the SID that every permission, file owner, and audit log
+    entry points to. A recreated account gets a new SID and is a different identity.
+    Deletion happens only after retention review, with documented approval.
+6.9 Orphaned accounts (no HR record, no sponsor, no owner) are processed as leavers immediately.
+    A privileged orphan is Critical priority.
+6.10 One identity holds many accounts. List every other system the person may have used
+     (email, core banking, loan origination, HR portal) as follow-up actions in the ticket.
+6.11 The leaver tool, C:\Ironbridge\Tools\Invoke-IBLeaver.ps1, is always run with -WhatIf first.
+     Review the dry run log, then run live. Both logs are retained as evidence.
+
+7. PRIVILEGED AND HIGH RISK ACCESS
+7.1 Review EFFECTIVE (recursive) membership of privileged groups, not only direct membership.
+7.2 No nested groups inside Domain Admins.
+7.3 Every privileged account has a named owner and a ticket. Any exception is written to the
+    exception register (C:\Ironbridge\Evidence\EXCEPTIONS-register.csv) with an owner and a review date.
+7.4 Funds-transfer groups (Wire-Initiate, Wire-Approve) are owned by the wire system owner.
+    IT does NOT change them on its own. Record every member and every conflict in the exception
+    register, then escalate to the COO. Separation of duties reviews happen with the system owner.
+
+8. EVIDENCE AND AUDIT
+8.1 Work notes are written DURING the work: what you did, the result, what it ruled out.
+8.2 Logs: C:\Ironbridge\Logs        Evidence: C:\Ironbridge\Evidence
+8.3 Export the ServiceDesk audit log at the end of every session.
+8.4 Remediation is verified with C:\Ironbridge\Tools\Test-Ironbridge.ps1.
+    Undocumented work is indistinguishable from work nobody did.
+
+APPENDIX A | IB-STD-001 DIRECTORY STANDARD (IT TO AUTHOR)
+Save as C:\Ironbridge\Work\IB-STD-001-Directory-Standard.md with these sections:
+ 1. Purpose and scope
+ 2. OU design, with the reason for each level (policy, delegation, or clarity)
+ 3. Naming conventions for users, service accounts, groups, computers, with examples
+ 4. Collision rule, with a worked example
+ 5. Required attributes, and why each one matters
+ 6. Access model: role groups only, one role per account, no direct permissions
+ 7. Role catalog summary, and who owns changes to it
+ 8. Account states (enabled, disabled, locked, expired) and why leavers are disabled, not deleted
+ 9. Privileged access rules and the exception register
+10. Review cadence and document owner

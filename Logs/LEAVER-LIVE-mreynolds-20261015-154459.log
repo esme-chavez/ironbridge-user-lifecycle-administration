@@ -1,0 +1,7 @@
+2026-10-15T15:45:00 | JML-1002 | LIVE | BEFORE | Enabled=True | PasswordNeverExpires=False | PasswordLastSet=10/15/2026 14:56:45 | LastLogon= | adminCount=
+2026-10-15T15:45:00 | JML-1002 | LIVE | BEFORE | Groups=
+2026-10-15T15:45:00 | JML-1002 | LIVE | Disabled account
+2026-10-15T15:45:00 | JML-1002 | LIVE | Password reset to a random value. PasswordNeverExpires cleared.
+2026-10-15T15:45:00 | JML-1002 | LIVE | Description stamped
+2026-10-15T15:45:00 | JML-1002 | LIVE | Moved to Disabled Users
+2026-10-15T15:45:00 | JML-1002 | LIVE | COMPLETE | Account preserved, not deleted | Log: C:\Ironbridge\Logs\LEAVER-LIVE-mreynolds-20261015-154459.log

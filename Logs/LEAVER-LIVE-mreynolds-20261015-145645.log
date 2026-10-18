@@ -1,0 +1,9 @@
+2026-10-15T14:56:45 | JML-1002 | LIVE | BEFORE | Enabled=True | PasswordNeverExpires=True | PasswordLastSet=10/06/2026 13:32:45 | LastLogon= | adminCount=1
+2026-10-15T14:56:45 | JML-1002 | LIVE | BEFORE | Groups=Domain Admins
+2026-10-15T14:56:45 | JML-1002 | LIVE | Disabled account
+2026-10-15T14:56:45 | JML-1002 | LIVE | Password reset to a random value. PasswordNeverExpires cleared.
+2026-10-15T14:56:45 | JML-1002 | LIVE | Removed from Domain Admins
+2026-10-15T14:56:46 | JML-1002 | LIVE | adminCount cleared and permission inheritance re-enabled
+2026-10-15T14:56:46 | JML-1002 | LIVE | Description stamped
+2026-10-15T14:56:46 | JML-1002 | LIVE | Moved to Disabled Users
+2026-10-15T14:56:46 | JML-1002 | LIVE | COMPLETE | Account preserved, not deleted | Log: C:\Ironbridge\Logs\LEAVER-LIVE-mreynolds-20261015-145645.log

@@ -1,0 +1,37 @@
+2026-10-15T17:23:53 | JML-1003 | LIVE | aboone to aboone | E1010 | Branch Operations Specialist | ROLE-Operations | password now expires | OU=Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:53 | JML-1003 | LIVE | btolliver to btolliver | E1015 | Facilities Coordinator | ROLE-Facilities | password now expires | OU=Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:53 | JML-1003 | LIVE | cboyd to cboyd | E1003 | Head Teller | ROLE-Teller | password now expires | OU=Elm Street,OU=Retail Banking,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:54 | JML-1003 | LIVE | cvance to cvance | E1006 | Loan Administration Manager | ROLE-LendingManager | password now expires | OU=Lending,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:54 | JML-1003 | LIVE | dhalloran to dhalloran | E1013 | Operations Manager | ROLE-Operations | password now expires | OU=Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:54 | JML-1003 | LIVE | dpruitt to dpruitt | E1007 | Mortgage Officer | ROLE-LoanOfficer | password now expires | OU=Lending,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:55 | JML-1003 | LIVE | jruiz to jruiz | E1005 | Teller | ROLE-Teller | password now expires | OU=Maple Avenue,OU=Retail Banking,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:55 | JML-1003 | LIVE | kmarsh to kmarsh | E1009 | Wire Operations Specialist | ROLE-WireOperations | password now expires | OU=Wire Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:55 | JML-1003 | LIVE | mfoss to mfoss | E1004 | Teller | ROLE-Teller | password now expires | OU=Main Office,OU=Retail Banking,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:56 | JML-1003 | LIVE | praman to praman | E1008 | Loan Processor | ROLE-LoanProcessor | password now expires | OU=Lending,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:56 | JML-1003 | LIVE | rdemarco to rdemarco | E1002 | Branch Manager | ROLE-BranchManager | password now expires | OU=Maple Avenue,OU=Retail Banking,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:56 | JML-1003 | LIVE | rwhitfield to rwhitfield | E1001 | Chief Operating Officer | ROLE-Executive | password now expires | OU=Executive,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:57 | JML-1003 | LIVE | spike to spike | E1012 | Back Office Specialist | ROLE-Operations | password now expires | OU=Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:57 | JML-1003 | LIVE | tbrunner to tbrunner | E1011 | Branch Operations Specialist | ROLE-Operations | password now expires | OU=Operations,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:57 | JML-1003 | LIVE | teckert to teckert | E1014 | Wealth Advisor | ROLE-WealthAdvisor | password now expires | OU=Wealth Management,OU=Users,OU=Ironbridge,DC=ironbridge,DC=local
+2026-10-15T17:23:57 | JML-1003 | LIVE | Manager: aboone reports to dhalloran
+2026-10-15T17:23:58 | JML-1003 | LIVE | Manager: btolliver reports to dhalloran
+2026-10-15T17:23:58 | JML-1003 | LIVE | Manager: cboyd reports to rwhitfield
+2026-10-15T17:23:58 | JML-1003 | LIVE | Manager: cvance reports to rwhitfield
+2026-10-15T17:23:58 | JML-1003 | LIVE | Manager: dhalloran reports to rwhitfield
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: dpruitt reports to cvance
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: jruiz reports to rdemarco
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: kmarsh reports to rwhitfield
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: mfoss reports to rwhitfield
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: praman reports to cvance
+2026-10-15T17:23:59 | JML-1003 | LIVE | Manager: rdemarco reports to rwhitfield
+2026-10-15T17:24:00 | JML-1003 | LIVE | Manager: spike reports to dhalloran
+2026-10-15T17:24:00 | JML-1003 | LIVE | Manager: tbrunner reports to dhalloran
+2026-10-15T17:24:00 | JML-1003 | LIVE | Manager: teckert reports to rwhitfield
+2026-10-15T17:24:00 | JML-1003 | LIVE | Disabled and preserved: asdf
+2026-10-15T17:24:01 | JML-1003 | LIVE | Disabled and preserved: teller_new
+2026-10-15T17:24:01 | JML-1003 | LIVE | Disabled and preserved: teller_new2
+2026-10-15T17:24:01 | JML-1003 | LIVE | Disabled and preserved: TEMP
+2026-10-15T17:24:01 | JML-1003 | LIVE | Disabled and preserved: TEMP_DO_NOT_USE
+2026-10-15T17:24:02 | JML-1003 | LIVE | Disabled and preserved: test
+2026-10-15T17:24:02 | JML-1003 | LIVE | Disabled and preserved: vpn_user
+2026-10-15T17:24:02 | JML-1003 | LIVE | COMPLETE

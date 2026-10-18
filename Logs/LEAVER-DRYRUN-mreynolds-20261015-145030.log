@@ -1,0 +1,3 @@
+2026-10-15T14:50:30 | JML-1002 | DRYRUN | BEFORE | Enabled=True | PasswordNeverExpires=True | PasswordLastSet=10/06/2026 13:32:45 | LastLogon= | adminCount=1
+2026-10-15T14:50:31 | JML-1002 | DRYRUN | BEFORE | Groups=Domain Admins
+2026-10-15T14:50:31 | JML-1002 | DRYRUN | COMPLETE | Account preserved, not deleted | Log: C:\Ironbridge\Logs\LEAVER-DRYRUN-mreynolds-20261015-145030.log
